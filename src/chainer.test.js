@@ -10,11 +10,11 @@ describe(`function 'chainer'`, () => {
   });
 
   it('should return function', () => {
-    expect(chainer()).toBeInstanceOf(Function);
+    expect(chainer([])).toBeInstanceOf(Function);
   });
 
   it('returned function should return number', () => {
-    expect(typeof chainer(arr)()).toBe('number');
+    expect(typeof chainer(arr)(0)).toBe('number');
   });
 
   it('returned function should be called with argument', () => {
